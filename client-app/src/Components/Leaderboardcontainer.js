@@ -1,7 +1,4 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faFire } from '@fortawesome/free-solid-svg-icons';
-import { Card, CardBody, CardTitle, Image, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
 import Leaderboard from './Leaderboard';
 import '../styles/LeaderBoard.css'
