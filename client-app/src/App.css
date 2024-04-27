@@ -36,19 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.initials{
-  font-size: large;
-  border: 1px solid #61dafb;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;
-  font-weight: 700;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
