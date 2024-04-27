@@ -13,7 +13,7 @@ const Leaderboard = ({ groupName, data }) => {
     });
 
     return (
-        <div style={{ width: '30rem'}}>
+        <div>
             <h3>{groupName} Group</h3>
             {sortedData.map((item, index) => (
                 <Card key={index} style={{ margin: '10px', borderRadius:'20px' }}>
@@ -27,7 +27,7 @@ const Leaderboard = ({ groupName, data }) => {
                             </Col>
                             
                             {/* Name and Tagline */}
-                            <Col xs={6} md={4}>
+                            <Col xs={6} md={6}>
                                 <Row>
                                     <Col xs={12}>
                                         <CardTitle>{item.name}</CardTitle>
@@ -40,7 +40,7 @@ const Leaderboard = ({ groupName, data }) => {
                                 </Row>
                             </Col>
                             {/* Fire Icon and Streak */}
-                            {(item.streak>0)&&(<Col xs={6} md={4} className="text-right">
+                            {(item.streak>0)&&(<Col xs={6} md={2} className="text-right">
                                 
                             <Row>
                                     <Col xs={12}>

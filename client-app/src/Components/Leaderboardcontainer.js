@@ -23,7 +23,7 @@ const LeaderboardContainer = () => {
 
     return (
         <>
-            <Carousel style={{ width: '30rem'}} controls indicators variant="dark">
+            <Carousel controls indicators variant="dark">
                 <Carousel.Item>
                     <Leaderboard
                         groupName={"Family"}
