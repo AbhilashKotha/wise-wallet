@@ -1,16 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import LeaderboardContainer from './Components/Leaderboardcontainer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Dashboard from './components/DashboardComponent';
+import AboutComponent from './components/AboutComponent';
 
-function App() {
-
+const App = () => {
   return (
-    <div className="App">
-      <LeaderboardContainer/>
-    </div>
+    <Router>
+      <NavBar/>
+      <Routes>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
+        <Route path="/about" element={<AboutComponent />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
