@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './components/DashboardComponent';
 import SettingsPage from './components/SettingsPage';
 import StatementsComponent from './components/StatementsComponent';
+import GroupContainer from './components/GroupContainer';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/statements" element={<StatementsComponent/>} />
+        <Route path="/groups" element={<GroupContainer />} />
       </Routes>
     </Router>
   );

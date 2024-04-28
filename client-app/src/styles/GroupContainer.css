@@ -1,0 +1,59 @@
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+  
+  .scroll-button.left {
+    left: 0;
+  }
+  
+  .scroll-button.right {
+    right: 0;
+  }
+
+  .row-md-6 {
+    padding: 3rem;
+  }
+
+  .btn-primary {
+    color: #fff;
+    border: transparent;
+    background-color: #142f37;
+    cursor: not-allowed;
+    padding: 0.7em;
+  }
+
+  .btn-primary:hover {
+    background:peru;
+}
+
+.col-each-group {
+  border-radius: 20px;
+  padding: 1.43vw;
+  border-spacing: 20px;
+}
+
+ 
+.col {
+    position: relative;
+  }
+
+.filtered-friends-name {
+  border-radius: 20px;
+  padding: 0.5vw;
+  border-spacing: 20px;
+  background-color: lightgrey;
+}
+
+.amount-h4 {
+  border-radius: 20px;
+  padding: 0.5vw;
+  border-spacing: 20px;
+  background-color: lightgrey;
+}

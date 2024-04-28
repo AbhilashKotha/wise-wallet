@@ -1,0 +1,7 @@
+flask
+flask-cors
+pytest
+pypdfium2
+config
+openai
+Pillow

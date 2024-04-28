@@ -1,0 +1,47 @@
+{
+    "April": {
+      "totalBudget": 5000,
+      "totalSpent": 2500,
+      "expenseData": [
+        { "category": "Lifestyle", "amount": 800 },
+        { "category": "Food", "amount": 600 },
+        { "category": "Health", "amount": 400 },
+        { "category": "Groceries", "amount": 500 },
+        { "category": "Others", "amount": 200 }
+      ]
+    },
+    "March": {
+      "totalBudget": 4500,
+      "totalSpent": 2000,
+      "expenseData": [
+        { "category": "Lifestyle", "amount": 400 },
+        { "category": "Food", "amount": 300 },
+        { "category": "Health", "amount": 500 },
+        { "category": "Groceries", "amount": 700 },
+        { "category": "Others", "amount": 100 }
+      ]
+    },
+    "February": {
+        "totalBudget": 6000,
+        "totalSpent": 5000,
+        "expenseData": [
+          { "category": "Lifestyle", "amount": 1000 },
+          { "category": "Food", "amount": 2000 },
+          { "category": "Health", "amount": 500 },
+          { "category": "Groceries", "amount": 1000 },
+          { "category": "Others", "amount": 500 }
+        ]
+      },
+      "January": {
+        "totalBudget": 2000,
+        "totalSpent": 3000,
+        "expenseData": [
+          { "category": "Lifestyle", "amount": 1000 },
+          { "category": "Food", "amount": 500 },
+          { "category": "Health", "amount": 1000 },
+          { "category": "Groceries", "amount": 400 },
+          { "category": "Others", "amount": 100 }
+        ]
+      }
+  }
+  

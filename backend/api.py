@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import io
 from main import process_doc,detect_document_text,process_text
+import json
+from datetime import datetime, timedelta 
 
 app = Flask(__name__)
 CORS(app, origins=['http://localhost:3000', 'http://127.0.0.1:3000', '*'])
@@ -61,6 +63,49 @@ def process_pdf():
         return text, 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+with open('./test-data/monthly-data.json') as personal_expenses:
+    monthly_data = json.load(personal_expenses)
+    print("data", monthly_data)
+
+with open('./test-data/mock-groups-data.json') as group_data:
+  groups_data = json.load(group_data)
+  print("groups data", groups_data)
+
+def get_past_three_months(current_date):
+    months = []
+    for i in range(1, 4):
+        past_month = current_date - timedelta(days=(i * 30))  # Use timedelta here
+        months.append(past_month.strftime("%B"))
+    return months
+
+@app.route('/personal_data/<month>', methods=['GET'])
+def get_personal_data(month):
+    """
+    API endpoint to retrieve personal data for a specific month.
+
+    Args:
+        month (str): The month for which data is requested.
+
+    Returns:
+        JSON: A JSON object containing total budget, total spent, and expense data.
+    """
+    if month not in monthly_data:
+        return jsonify({'error': 'Invalid month'}), 400
+
+    data = monthly_data[month]
+    past_three_months = get_past_three_months(datetime.now())  # Use datetime.now() directly
+
+    return jsonify({
+        'totalBudget': data['totalBudget'],
+        'totalSpent': data['totalSpent'],
+        'expenseData': data['expenseData'],
+    })
+
+    @app.route('/groups')
+    def get_group_names():
+        group_names = [group['name'] for group in groups_data]
+        return jsonify({'groups': group_names})
 
 if __name__ == '__main__':
     app.run(debug=True)
