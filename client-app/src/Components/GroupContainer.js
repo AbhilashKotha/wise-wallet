@@ -10,69 +10,21 @@ const GroupContainer = () => {
     const [newGroupName, setNewGroupName] = useState('');
     const [showAddFriendsModal, setShowAddFriendsModal] = useState(false);
     const [showCreateGroupModal, setShowCreateGroupModal] = useState(false);
+    //const [groupsData, setGroupsData] = useState([]); // State to store fetched groups
 
- // Mock data for groups
- const mockGroups = [
-    {
-      id: 1,
-      name: 'Family',
-      data: [
-        { name: "John", initials: "JM", rank: 1, streak: 0, status: "I am doing it" },
-        { name: "Mike", initials: "MK", rank: 3, streak: 2, status: "I will beat you all" },
-        { name: "Janardhan", initials: "JJ", rank: 2, streak: 6, status: "I will beat you" },
-        { name: "Cyn", initials: "CT", rank: 4, streak: 3, status: "Savin it" },
-        { name: "Abhilash", initials: "AK", rank: 6, streak: 4, status: "I will beat you" },
-        { name: "Siri", initials: "SG", rank: 5, streak: 6, status: "I will beat you" },
-      ],
-    },
-    {
-      id: 2,
-      name: 'Friends',
-      data: [
-        { name: "What", initials: "JM", rank: 1, streak: 0, status: "I am doing it" },
-        { name: "ever", initials: "MK", rank: 3, streak: 2, status: "I will beat you all" },
-        { name: "the", initials: "JJ", rank: 2, streak: 6, status: "I will beat you" },
-        { name: "data", initials: "CT", rank: 4, streak: 3, status: "Savin it" },
-        { name: "is", initials: "AK", rank: 6, streak: 4, status: "I will beat you" },
-        { name: "this", initials: "AK", rank: 6, streak: 4, status: "I will beat you" },
-      ],
-    },
-    {
-        id: 3,
-        name: 'College',
-        data: [
-          { name: "What", initials: "JM", rank: 1, streak: 0, status: "I am doing it" },
-          { name: "ever", initials: "MK", rank: 3, streak: 2, status: "I will beat you all" },
-          { name: "the", initials: "JJ", rank: 2, streak: 6, status: "I will beat you" },
-          { name: "data", initials: "CT", rank: 4, streak: 3, status: "Savin it" },
-          { name: "is", initials: "AK", rank: 6, streak: 4, status: "I will beat you" },
-          { name: "this", initials: "AK", rank: 6, streak: 4, status: "I will beat you" },
-        ],
-      },
-      {
-        id: 4,
-        name: 'Lifestyle',
-        data: [
-          { name: "What", initials: "JM", rank: 1, streak: 0, status: "I am doing it" },
-          { name: "ever", initials: "MK", rank: 3, streak: 2, status: "I will beat you all" },
-          { name: "the", initials: "JJ", rank: 2, streak: 6, status: "I will beat you" },
-          
-        ],
-      },
-      {
-        id: 5,
-        name: 'Clothing',
-        data: [
-          { name: "What", initials: "JM", rank: 1, streak: 0, status: "I am doing it" },
-          { name: "ever", initials: "MK", rank: 3, streak: 2, status: "I will beat you all" },
-          { name: "the", initials: "JJ", rank: 2, streak: 6, status: "I will beat you" },
-          { name: "data", initials: "CT", rank: 4, streak: 3, status: "Savin it" },
-          { name: "is", initials: "AK", rank: 6, streak: 4, status: "I will beat you" },
-          { name: "this", initials: "AK", rank: 6, streak: 4, status: "I will beat you" },
-        ],
-      },
-      
-  ];
+  // Fetch groups data on component mount
+  useEffect(() => {
+    const fetchGroups = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/groups');
+        const data = await response.json();
+        setGroups(data);
+      } catch (error) {
+        console.error('Error fetching groups:', error);
+      }
+    };
+    fetchGroups();
+  }, []);
 
   const mockFriends = [
     { id: 1, firstName: 'John', lastName: 'Doe' },
@@ -93,7 +45,7 @@ const GroupContainer = () => {
   ];
 
   const containerRef = useRef(null);
-  const [groups, setGroups] = useState(mockGroups);
+  const [groups, setGroups] = useState([]);
 
   const handleScrollLeft = () => {
     const container = containerRef.current;
@@ -146,7 +98,7 @@ const GroupContainer = () => {
   };
 
   const getFilteredFriends = () => {
-    const existingFriends = mockGroups.flatMap((group) =>
+    const existingFriends = groups.flatMap((group) =>
       group.data.map((member) => `${member.name}`)
     );
     return mockFriends.filter(

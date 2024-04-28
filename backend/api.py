@@ -66,11 +66,11 @@ def process_pdf():
 
 with open('./test-data/monthly-data.json') as personal_expenses:
     monthly_data = json.load(personal_expenses)
-    print("data", monthly_data)
+    # print("data", monthly_data)
 
 with open('./test-data/mock-groups-data.json') as group_data:
   groups_data = json.load(group_data)
-  print("groups data", groups_data)
+#   print("groups data", groups_data)
 
 def get_past_three_months(current_date):
     months = []
@@ -102,10 +102,10 @@ def get_personal_data(month):
         'expenseData': data['expenseData'],
     })
 
-    @app.route('/groups')
-    def get_group_names():
-        group_names = [group['name'] for group in groups_data]
-        return jsonify({'groups': group_names})
+@app.route('/groups',methods=['GET'])
+def get_group_names():
+    #group_names = [group['name'] for group in groups_data]
+    return jsonify(groups_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
