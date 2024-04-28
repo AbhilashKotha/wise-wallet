@@ -10,7 +10,7 @@ function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" sticky="top" data-bs-theme="dark" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand  href="/dashboard">
             <img
               alt=""
               src="logo_temp.png"
