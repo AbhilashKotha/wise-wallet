@@ -12,8 +12,8 @@ const Leaderboard = ({ groupName, data }) => {
 
     // Function to calculate background color based on index and number of cards
     const calculateBackgroundColor = (index, length) => {
-        const darkGreen = 'rgba(0, 100, 0, 0.5)'; // Dark green with transparency
-        const lightGreen = 'rgba(152, 251, 152, 0.5)'; // Light green with transparency
+        const darkGreen = 'rgba(152, 255, 130, 0.5)'; // Dark green with transparency
+        const lightGreen = 'rgba(152, 221, 152, 0.5)'; // Light green with transparency
         const amber = 'rgba(255, 191, 0, 0.5)'; // Amber with transparency
         const paleAmber = 'rgba(255, 248, 220, 0.5)'; // Pale amber with transparency
         const darkRed = 'rgba(139, 0, 0, 0.5)'; // Dark red with transparency
