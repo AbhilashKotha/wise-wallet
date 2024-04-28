@@ -73,7 +73,7 @@ const ChatComponent = ({live}) => {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-6 offset-md-3">
+          <div className="col-md-12">
             <div className="chat-window">
               <div className="chat-messages">
                 {messages.map((message, index) => (

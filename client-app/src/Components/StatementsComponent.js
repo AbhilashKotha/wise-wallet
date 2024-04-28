@@ -14,8 +14,9 @@ function StatementsComponent() {
                     justify
                 >
                     <Tab eventKey="file" title="Upload Statements">
+                    <h3>Upload a bank statement</h3>
                         <Form.Group controlId="formFile" className="mb-3">
-                            <Form.Label>Select a statement from your computer</Form.Label>
+                            
                             <Form.Control type="file" />
                         </Form.Group>
                         <ChatComponent 
@@ -23,7 +24,7 @@ function StatementsComponent() {
                         />
                     </Tab>
                     <Tab eventKey="live" title="Live Data">
-                        <h3>chat with your live data</h3>
+                        <h3>Ask about your finances</h3>
                         <ChatComponent 
                         live={true}
                         />
