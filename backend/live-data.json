@@ -1,0 +1,524 @@
+[
+    {
+      "Transaction date": "04/25",
+      "Merchant": "Amazon",
+      "Category": "Online Shopping",
+      "Amount": "$49.99"
+    },
+    {
+      "Transaction date": "04/24",
+      "Merchant": "Starbucks",
+      "Category": "Food & Dining",
+      "Amount": "$5.25"
+    },
+    {
+      "Transaction date": "04/23",
+      "Merchant": "Uber",
+      "Category": "Transportation",
+      "Amount": "$12.75"
+    },
+    {
+      "Transaction date": "04/22",
+      "Merchant": "Whole Foods",
+      "Category": "Groceries",
+      "Amount": "$84.67"
+    },
+    {
+      "Transaction date": "04/21",
+      "Merchant": "Netflix",
+      "Category": "Entertainment",
+      "Amount": "$14.99"
+    },
+    {
+      "Transaction date": "04/20",
+      "Merchant": "Best Buy",
+      "Category": "Electronics",
+      "Amount": "$329.99"
+    },
+    {
+      "Transaction date": "04/19",
+      "Merchant": "Target",
+      "Category": "Shopping",
+      "Amount": "$67.42"
+    },
+    {
+      "Transaction date": "04/18",
+      "Merchant": "Chipotle",
+      "Category": "Food & Dining",
+      "Amount": "$18.75"
+    },
+    {
+      "Transaction date": "04/17",
+      "Merchant": "Spotify",
+      "Category": "Entertainment",
+      "Amount": "$9.99"
+    },
+    {
+      "Transaction date": "04/16",
+      "Merchant": "Gas Station",
+      "Category": "Fuel",
+      "Amount": "$42.18"
+    },
+    {
+      "Transaction date": "04/15",
+      "Merchant": "Macy's",
+      "Category": "Shopping",
+      "Amount": "$127.89"
+    },
+    {
+      "Transaction date": "04/14",
+      "Merchant": "Airbnb",
+      "Category": "Travel",
+      "Amount": "$258.00"
+    },
+    {
+      "Transaction date": "04/13",
+      "Merchant": "Subway",
+      "Category": "Food & Dining",
+      "Amount": "$7.99"
+    },
+    {
+      "Transaction date": "04/12",
+      "Merchant": "Gym Membership",
+      "Category": "Fitness",
+      "Amount": "$59.99"
+    },
+    {
+      "Transaction date": "04/11",
+      "Merchant": "Home Depot",
+      "Category": "Home Improvement",
+      "Amount": "$184.27"
+    },
+    {
+      "Transaction date": "04/10",
+      "Merchant": "Apple",
+      "Category": "Electronics",
+      "Amount": "$999.00"
+    },
+    {
+      "Transaction date": "04/09",
+      "Merchant": "Walgreens",
+      "Category": "Pharmacy",
+      "Amount": "$23.49"
+    },
+    {
+      "Transaction date": "04/08",
+      "Merchant": "Cheesecake Factory",
+      "Category": "Food & Dining",
+      "Amount": "$68.21"
+    },
+    {
+      "Transaction date": "04/07",
+      "Merchant": "Uber Eats",
+      "Category": "Food Delivery",
+      "Amount": "$32.17"
+    },
+    {
+      "Transaction date": "04/06",
+      "Merchant": "Verizon Wireless",
+      "Category": "Utilities",
+      "Amount": "$112.44"
+    },
+    {
+      "Transaction date": "04/05",
+      "Merchant": "Costco",
+      "Category": "Wholesale",
+      "Amount": "$297.63"
+    },
+    {
+      "Transaction date": "04/04",
+      "Merchant": "Nordstrom",
+      "Category": "Shopping",
+      "Amount": "$185.49"
+    },
+    {
+      "Transaction date": "04/03",
+      "Merchant": "Uber",
+      "Category": "Transportation",
+      "Amount": "$17.28"
+    },
+    {
+      "Transaction date": "04/02",
+      "Merchant": "AMC Theatres",
+      "Category": "Entertainment",
+      "Amount": "$24.99"
+    },
+    {
+      "Transaction date": "04/01",
+      "Merchant": "Pizza Hut",
+      "Category": "Food & Dining",
+      "Amount": "$28.75"
+    },
+    {
+      "Transaction date": "03/31",
+      "Merchant": "Amazon",
+      "Category": "Online Shopping",
+      "Amount": "$87.42"
+    },
+    {
+      "Transaction date": "03/30",
+      "Merchant": "Starbucks",
+      "Category": "Food & Dining",
+      "Amount": "$4.85"
+    },
+    {
+      "Transaction date": "03/29",
+      "Merchant": "Uber",
+      "Category": "Transportation",
+      "Amount": "$9.17"
+    },
+    {
+      "Transaction date": "03/28",
+      "Merchant": "Trader Joe's",
+      "Category": "Groceries",
+      "Amount": "$62.37"
+    },
+    {
+      "Transaction date": "03/27",
+      "Merchant": "Hulu",
+      "Category": "Entertainment",
+      "Amount": "$11.99"
+    },
+    {
+      "Transaction date": "03/26",
+      "Merchant": "Best Buy",
+      "Category": "Electronics",
+      "Amount": "$479.99"
+    },
+    {
+      "Transaction date": "03/25",
+      "Merchant": "Target",
+      "Category": "Shopping",
+      "Amount": "$93.27"
+    },
+    {
+      "Transaction date": "03/24",
+      "Merchant": "Chipotle",
+      "Category": "Food & Dining",
+      "Amount": "$16.85"
+    },
+    {
+      "Transaction date": "03/23",
+      "Merchant": "Spotify",
+      "Category": "Entertainment",
+      "Amount": "$9.99"
+    },
+    {
+      "Transaction date": "03/22",
+      "Merchant": "Gas Station",
+      "Category": "Fuel",
+      "Amount": "$37.92"
+    },
+    {
+      "Transaction date": "03/21",
+      "Merchant": "Macy's",
+      "Category": "Shopping",
+      "Amount": "$104.19"
+    },
+    {
+      "Transaction date": "03/20",
+      "Merchant": "Airbnb",
+      "Category": "Travel",
+      "Amount": "$312.00"
+    },
+    {
+      "Transaction date": "03/19",
+      "Merchant": "Subway",
+      "Category": "Food & Dining",
+      "Amount": "$6.49"
+    },
+    {
+      "Transaction date": "03/18",
+      "Merchant": "Gym Membership",
+      "Category": "Fitness",
+      "Amount": "$59.99"
+    },
+    {
+      "Transaction date": "03/17",
+      "Merchant": "Home Depot",
+      "Category": "Home Improvement",
+      "Amount": "$237.82"
+    },
+    {
+      "Transaction date": "03/16",
+      "Merchant": "Apple",
+      "Category": "Electronics",
+      "Amount": "$649.00"
+    },
+    {
+      "Transaction date": "03/15",
+      "Merchant": "Walgreens",
+      "Category": "Pharmacy",
+      "Amount": "$18.27"
+    },
+    {
+        "Transaction date": "03/13",
+        "Merchant": "Uber Eats",
+        "Category": "Food Delivery",
+        "Amount": "$28.49"
+      },
+      {
+        "Transaction date": "03/12",
+        "Merchant": "Verizon Wireless",
+        "Category": "Utilities",
+        "Amount": "$112.44"
+      },
+      {
+        "Transaction date": "03/11",
+        "Merchant": "Costco",
+        "Category": "Wholesale",
+        "Amount": "$374.92"
+      },
+      {
+        "Transaction date": "03/10",
+        "Merchant": "Nordstrom",
+        "Category": "Shopping",
+        "Amount": "$218.76"
+      },
+      {
+        "Transaction date": "03/09",
+        "Merchant": "Uber",
+        "Category": "Transportation",
+        "Amount": "$11.63"
+      },
+      {
+        "Transaction date": "03/08",
+        "Merchant": "AMC Theatres",
+        "Category": "Entertainment",
+        "Amount": "$19.99"
+      },
+      {
+        "Transaction date": "03/07",
+        "Merchant": "Pizza Hut",
+        "Category": "Food & Dining",
+        "Amount": "$34.17"
+      },
+      {
+        "Transaction date": "03/06",
+        "Merchant": "Amazon",
+        "Category": "Online Shopping",
+        "Amount": "$62.28"
+      },
+      {
+        "Transaction date": "03/05",
+        "Merchant": "Starbucks",
+        "Category": "Food & Dining",
+        "Amount": "$6.15"
+      },
+      {
+        "Transaction date": "03/04",
+        "Merchant": "Uber",
+        "Category": "Transportation",
+        "Amount": "$14.39"
+      },
+      {
+        "Transaction date": "03/03",
+        "Merchant": "Whole Foods",
+        "Category": "Groceries",
+        "Amount": "$97.83"
+      },
+      {
+        "Transaction date": "03/02",
+        "Merchant": "Netflix",
+        "Category": "Entertainment",
+        "Amount": "$14.99"
+      },
+      {
+        "Transaction date": "03/01",
+        "Merchant": "Best Buy",
+        "Category": "Electronics",
+        "Amount": "$589.99"
+      },
+      {
+        "Transaction date": "02/28",
+        "Merchant": "Target",
+        "Category": "Shopping",
+        "Amount": "$78.42"
+      },
+      {
+        "Transaction date": "02/27",
+        "Merchant": "Chipotle",
+        "Category": "Food & Dining",
+        "Amount": "$21.65"
+      },
+      {
+        "Transaction date": "02/26",
+        "Merchant": "Spotify",
+        "Category": "Entertainment",
+        "Amount": "$9.99"
+      },
+      {
+        "Transaction date": "02/25",
+        "Merchant": "Gas Station",
+        "Category": "Fuel",
+        "Amount": "$46.73"
+      },
+      {
+        "Transaction date": "02/24",
+        "Merchant": "Macy's",
+        "Category": "Shopping",
+        "Amount": "$163.29"
+      },
+      {
+        "Transaction date": "02/23",
+        "Merchant": "Airbnb",
+        "Category": "Travel",
+        "Amount": "$397.00"
+      },
+      {
+        "Transaction date": "02/22",
+        "Merchant": "Subway",
+        "Category": "Food & Dining",
+        "Amount": "$9.79"
+      },
+      {
+        "Transaction date": "02/21",
+        "Merchant": "Gym Membership",
+        "Category": "Fitness",
+        "Amount": "$59.99"
+      },
+      {
+        "Transaction date": "02/20",
+        "Merchant": "Home Depot",
+        "Category": "Home Improvement",
+        "Amount": "$297.54"
+      },
+      {
+        "Transaction date": "02/19",
+        "Merchant": "Apple",
+        "Category": "Electronics",
+        "Amount": "$799.00"
+      },
+      {
+        "Transaction date": "02/18",
+        "Merchant": "Walgreens",
+        "Category": "Pharmacy",
+        "Amount": "$32.16"
+      },
+      {
+        "Transaction date": "02/17",
+        "Merchant": "Cheesecake Factory",
+        "Category": "Food & Dining",
+        "Amount": "$52.37"
+      },
+      {
+        "Transaction date": "02/16",
+        "Merchant": "Uber Eats",
+        "Category": "Food Delivery",
+        "Amount": "$27.83"
+      },
+      {
+        "Transaction date": "02/15",
+        "Merchant": "Verizon Wireless",
+        "Category": "Utilities",
+        "Amount": "$112.44"
+      },
+      {
+        "Transaction date": "02/14",
+        "Merchant": "Costco",
+        "Category": "Wholesale",
+        "Amount": "$421.69"
+      },
+      {
+        "Transaction date": "02/13",
+        "Merchant": "Nordstrom",
+        "Category": "Shopping",
+        "Amount": "$274.38"
+      },
+      {
+        "Transaction date": "02/12",
+        "Merchant": "Uber",
+        "Category": "Transportation",
+        "Amount": "$8.95"
+      },
+      {
+        "Transaction date": "02/11",
+        "Merchant": "AMC Theatres",
+        "Category": "Entertainment",
+        "Amount": "$27.99"
+      },
+      {
+        "Transaction date": "02/10",
+        "Merchant": "Pizza Hut",
+        "Category": "Food & Dining",
+        "Amount": "$41.25"
+      },
+      {
+        "Transaction date": "02/09",
+        "Merchant": "Amazon",
+        "Category": "Online Shopping",
+        "Amount": "$37.49"
+      },
+      {
+        "Transaction date": "02/08",
+        "Merchant": "Starbucks",
+        "Category": "Food & Dining",
+        "Amount": "$4.25"
+      },
+      {
+        "Transaction date": "02/07",
+        "Merchant": "Uber",
+        "Category": "Transportation",
+        "Amount": "$6.72"
+      },
+      {
+        "Transaction date": "02/06",
+        "Merchant": "Trader Joe's",
+        "Category": "Groceries",
+        "Amount": "$83.17"
+      },
+      {
+        "Transaction date": "02/05",
+        "Merchant": "Hulu",
+        "Category": "Entertainment",
+        "Amount": "$11.99"
+      },
+      {
+        "Transaction date": "02/04",
+        "Merchant": "Best Buy",
+        "Category": "Electronics",
+        "Amount": "$629.99"
+      },
+      {
+        "Transaction date": "02/03",
+        "Merchant": "Target",
+        "Category": "Shopping",
+        "Amount": "$116.84"
+      },
+      {
+        "Transaction date": "02/02",
+        "Merchant": "Chipotle",
+        "Category": "Food & Dining",
+        "Amount": "$14.39"
+      },
+      {
+        "Transaction date": "02/01",
+        "Merchant": "Spotify",
+        "Category": "Entertainment",
+        "Amount": "$9.99"
+      },
+      {
+        "Transaction date": "01/31",
+        "Merchant": "Gas Station",
+        "Category": "Fuel",
+        "Amount": "$53.29"
+      },
+      {
+        "Transaction date": "01/30",
+        "Merchant": "Macy's",
+        "Category": "Shopping",
+        "Amount": "$197.62"
+      },
+      {
+        "Transaction date": "01/29",
+        "Merchant": "Airbnb",
+        "Category": "Travel",
+        "Amount": "$278.00"
+      },
+      {
+        "Transaction date": "01/28",
+        "Merchant": "Subway",
+        "Category": "Food & Dining",
+        "Amount": "$8.29"
+      }
+    ]

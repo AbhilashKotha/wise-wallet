@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './components/DashboardComponent';
 import SettingsPage from './components/SettingsPage';
+import StatementsComponent from './components/StatementsComponent';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/statements" element={<StatementsComponent/>} />
       </Routes>
     </Router>
   );

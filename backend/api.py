@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import io
 from main import process_doc,detect_document_text,process_text
 
 app = Flask(__name__)
+CORS(app, origins=['http://localhost:3000', 'http://127.0.0.1:3000', '*'])
 @app.route('/', methods=['GET'])
 def home():
        
