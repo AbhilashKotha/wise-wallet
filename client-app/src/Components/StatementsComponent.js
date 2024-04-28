@@ -18,10 +18,15 @@ function StatementsComponent() {
                             <Form.Label>Select a statement from your computer</Form.Label>
                             <Form.Control type="file" />
                         </Form.Group>
-                        <ChatComponent/>
+                        <ChatComponent 
+                        live={false}
+                        />
                     </Tab>
                     <Tab eventKey="live" title="Live Data">
-                        Tab content for Profile
+                        <h3>chat with your live data</h3>
+                        <ChatComponent 
+                        live={true}
+                        />
                     </Tab>
                 </Tabs>
             </Container>

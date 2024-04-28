@@ -41,11 +41,19 @@ def process_pdf():
         print('before')
         params = request.get_json()
         print(params)
-        if 'question' in params:
-                 text = process_text(params['question'])
+        text=""
+        if 'live' in params and params['live']:
+            if 'question' in params:
+                    text = process_text(params['question'],True)
+            else:
+                    text = process_text("")
+            print('********in if*****')
         else:
-                text = process_text("")
-        print('whet', type(text))
+            if 'question' in params:
+                    text = process_text(params['question'],False)
+            else:
+                    text = process_text("")
+            print('********in else*****')
         result = {
             'message': text,
         }

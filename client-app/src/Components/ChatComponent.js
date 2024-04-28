@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser,faRobot } from '@fortawesome/free-solid-svg-icons';
 import '../styles/ChatComponent.css'
 
-const ChatComponent = () => {
+const ChatComponent = ({live}) => {
     const [messages, setMessages] = useState([]);
     const [inputText, setInputText] = useState('');
     const [typing, settyping] = useState(false);
@@ -17,7 +17,7 @@ const ChatComponent = () => {
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ question }),
+            body: JSON.stringify({ question,live }),
           });
       
           if (!response.ok) {
