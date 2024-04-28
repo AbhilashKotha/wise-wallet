@@ -7,6 +7,8 @@ from config import load_config
 import ast
 from openai import OpenAI
 
+conversation = []
+
 def process_doc(doc):
   pdf = pdfium.PdfDocument(doc)
 
@@ -35,14 +37,41 @@ def process_doc(doc):
 
 def detect_document_text(content):
 
-    cont_str = """
+    cont_str = ""
+    # chk = False
+    # client = vision.ImageAnnotatorClient()
+    # image = vision.Image(content=content)
+    # response = client.document_text_detection(image=image)
+
+    # for page in response.full_text_annotation.pages:
+    #     print(len(page.blocks))
+    #     print(page.blocks[0])
+    #     for block in page.blocks:
+    #         for paragraph in block.paragraphs:
+    #             paragraph_text = ''.join([symbol.text for word in paragraph.words for symbol in word.symbols])
+    #             if paragraph_text.lower() == "feesandinterestcharged":
+    #                 chk = True
+    #                 break
+    #             cont_str+=paragraph_text
+    #             cont_str+="\n"
+    #         if chk:
+    #           break
+  
+    # if response.error.message:
+    #     raise Exception('{}\nFor more info on error messages, check: https://cloud.google.com/apis/design/errors'.format(response.error.message))
+    print('something is here')
+    response = process_text(cont_str)
+    return response
+
+def process_text(question):
+  text = """
 Transactions
 TRANS.
 DATE
 PAYMENTSANDCREDITS
 03/03
 INTERNETPAYMENT-THANKYOU
-AMOUNT-$328.73
+AMOUNT$328.73
 TRANS.
 DATE
 PURCHASES
@@ -84,78 +113,40 @@ Merchandise
 $20.00
 Supermarkets
 $43.52"""
-    # chk = False
-    # client = vision.ImageAnnotatorClient()
-    # image = vision.Image(content=content)
-    # response = client.document_text_detection(image=image)
-
-    # for page in response.full_text_annotation.pages:
-    #     print(len(page.blocks))
-    #     print(page.blocks[0])
-    #     for block in page.blocks:
-    #         for paragraph in block.paragraphs:
-    #             paragraph_text = ''.join([symbol.text for word in paragraph.words for symbol in word.symbols])
-    #             if paragraph_text.lower() == "feesandinterestcharged":
-    #                 chk = True
-    #                 break
-    #             cont_str+=paragraph_text
-    #             cont_str+="\n"
-    #         if chk:
-    #           break
-  
-    # if response.error.message:
-    #     raise Exception('{}\nFor more info on error messages, check: https://cloud.google.com/apis/design/errors'.format(response.error.message))
-    print('something is here')
-    response = process_text(cont_str)
-    return response
-
-def process_text(text):
-  
   config = load_config()
   print('I am in gpt')
   print(config)
   client = OpenAI(api_key=config)
   print('I am after client')
-  completion = client.chat.completions.create(
-    model="gpt-4",
-    messages=[
+  messages=[
       {"role": "system", "content": "You are a helpful assistant."},
       {"role": "user", "content": "Make a python dictionary object based on below scraped data. Data is not perfect, use your knowlegde while creating dictionary. the dictionary should have Transaction date, Merchant, Category, Amount. Try to extract a meaningful name for Merchant. Just give dictionary data, dont include anything else like clauses or notes in your response.\n\n{}".format(text)}
     ]
-  )
-  print(completion.choices[0].message.content)
-  transactions_response_string = completion.choices[0].message.content
+  global conversation
+  if len(conversation)==0:
+      conversation = messages
+  else:
+      conversation.append({"role": "user", "content":"Here is the question on above data\n\n{}".format(question)})
 
-  try:
-        response_dict = ast.literal_eval(transactions_response_string)
-        print('dict after')
-        print(response_dict)
-  except ValueError:
-        print("Error: Response is not a valid Python dictionary")
-        return None
-  return response_dict
-
-def process_nextQ(text):
+  print('conversation')
+  print('conversation')
+  print('conversation')
+ 
   
-  config = load_config()
-  print('I am in gpt')
-  print(config)
-  client = OpenAI(api_key=config)
-  print('I am after client')
   completion = client.chat.completions.create(
-    model="gpt-4",
-    messages=[
-      {"role": "user", "content": "when was the transaction done at Tommy Hilfiger"}
-    ]
+  model="gpt-4", 
+  messages=conversation
   )
-  print(completion.choices[0].message.content)
-  transactions_response_string = completion.choices[0].message.content
 
-  try:
-        response_dict = ast.literal_eval(transactions_response_string)
-        print('dict after')
-        print(response_dict)
-  except ValueError:
-        print("Error: Response is not a valid Python dictionary")
-        return None
-  return response_dict
+  conversation.append({"role":"assistant", "content":completion.choices[0].message.content})
+  transactions_response_string = completion.choices[0].message.content
+  print('transactions_response_string')
+  print(transactions_response_string)
+  # try:
+  #       response_dict = ast.literal_eval(transactions_response_string)
+  #       print('dict after')
+  #       print(response_dict)
+  # except ValueError:
+  #       print("Error: Response is not a valid Python dictionary")
+  #       return None
+  return transactions_response_string
