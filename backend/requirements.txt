@@ -5,3 +5,4 @@ pypdfium2
 config
 openai
 Pillow
+google-cloud-vision

@@ -2,7 +2,7 @@
 import pypdfium2 as pdfium
 import io
 from PIL import Image
-# from google.cloud import vision
+from google.cloud import vision
 from config import load_config
 import ast
 from openai import OpenAI
@@ -43,6 +43,40 @@ def process_doc(doc):
   detect_document_text(content)
 
 def detect_document_text(content):
+
+    cont_str = ''
+    chk = False
+
+    from google.oauth2 import service_account
+    service_account_file = 'molten-mechanic-420000-06ba9efa0d4f.json'
+    credentials = service_account.Credentials.from_service_account_file(
+        service_account_file
+    )
+    client = vision.ImageAnnotatorClient(credentials=credentials)
+
+    # client = vision.ImageAnnotatorClient()
+    image = vision.Image(content=content)
+    response = client.document_text_detection(image=image)
+
+    for page in response.full_text_annotation.pages:
+        # print(len(page.blocks))
+        # print(page.blocks[0])
+        for block in page.blocks:
+            for paragraph in block.paragraphs:
+                paragraph_text = ''.join([symbol.text for word in paragraph.words for symbol in word.symbols])
+                if paragraph_text.lower() == "feesandinterestcharged":
+                    chk = True
+                    break
+                cont_str+=paragraph_text
+                cont_str+="\n"
+            if chk:
+              break
+  
+    if response.error.message:
+        raise Exception('{}\nFor more info on error messages, check: https://cloud.google.com/apis/design/errors'.format(response.error.message))
+    print(cont_str)
+    process_text(cont_str)
+
 
     cont_str = """
 Transactions
