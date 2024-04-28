@@ -1,8 +1,8 @@
 import React from 'react';
 import '../styles/DashboardComponent.css'; // Import your CSS file
 import PersonalDataChart from './PersonalDataChartComponent';
-import LeaderboardContainer from './Leaderboardcontainer'
-import SuggestionsComponent from './SuggestionsComponent';
+import LeaderboardContainer from './Leaderboardcontainer';
+import Suggestions from './Suggestions';
 const DashboardComponent = () => {
     return (
         <div className="dashboard-container">
