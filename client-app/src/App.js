@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dashboard from './components/DashboardComponent';
-import AboutComponent from './components/AboutComponent';
+import SettingsPage from './components/SettingsPage';
+import StatementsComponent from './components/StatementsComponent';
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
       <Routes>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
-        <Route path="/about" element={<AboutComponent />} />
+        <Route path="/settings" element={<SettingsPage />} />
+        <Route path="/statements" element={<StatementsComponent/>} />
       </Routes>
     </Router>
   );

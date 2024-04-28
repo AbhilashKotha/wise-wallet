@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 import { Card, CardBody, CardTitle, Image, Row, Col } from 'react-bootstrap';
-import Carousel from 'react-bootstrap/Carousel';
 
 const Leaderboard = ({ groupName, data }) => {
     // Sort data in descending order based on rank, then streak as tiebreaker
