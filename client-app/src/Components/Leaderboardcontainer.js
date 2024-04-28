@@ -25,7 +25,7 @@ const LeaderboardContainer = () => {
           <Carousel controls indicators variant="dark">
             {/* Loop through mockGroups to create Carousel Items */}
             {groups.map((group) => (
-              <Carousel.Item key={group.id}>
+              <Carousel.Item key={group.id} interval={3000}>
                 <Leaderboard groupName={group.name} data={group.data} />
                 <br />
               </Carousel.Item>

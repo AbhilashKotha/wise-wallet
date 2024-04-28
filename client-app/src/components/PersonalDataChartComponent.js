@@ -93,9 +93,9 @@ const PersonalDataChart = () => {
                     </div>
                     <div>
                         <br/>
-                        <h4 className="amount-h4"> Spent Amount: {totalSpent}</h4>
+                        <h4 className="amount-h4"> Spent Amount: $ {totalSpent}</h4>
                         <br/>
-                        <h4 className="amount-h4">Total Budget: {totalBudget}</h4>
+                        <h4 className="amount-h4">Total Budget: $ {totalBudget}</h4>
                     </div>
                 </div>
                 <div className="col-md-6 chart-data-col">
