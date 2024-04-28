@@ -32,16 +32,16 @@ const GroupComponent = ({ groupName, data }) => {
     <div>
       <h3>{groupName} Group</h3>
       {sortedData.map((item, index) => (
-        <Card key={index} style={{ margin: '10px', borderRadius: '20px' }}>
+        <Card key={index} style={{ margin: '5px', borderRadius: '20px' }}>
           <CardBody style={{padding: '0.3rem'}}>
             <Row>
               {/* Icon */}
-              <Col xs={6} md={4} className="text-center">
+              <Col xs={6} md={5} className="text-center">
                 <div className="initials">{item.initials}</div>
               </Col>
               {/* Name and Tagline */}
               <Col style={{alignContent:'center'}}>
-                    <CardTitle>{item.name}</CardTitle>
+                    <CardTitle style={{fontSize:'1em'}}>{item.name}</CardTitle>
               </Col>
             </Row>
           </CardBody>

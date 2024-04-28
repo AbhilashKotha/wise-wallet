@@ -1,0 +1,19 @@
+[
+    {
+        "name": "suggestions",
+        "data": [
+            { "heading": "Food & Dining Expenses", "suggestion": "Consider reducing spending on food delivery services like Uber Eats and dining out at restaurants." },
+            { "heading": "Entertainment Expenses", "suggestion": "Cut down on entertainment subscriptions and expenses such as Netflix, Spotify, and movie theaters." },
+            { "heading": "Transportation Expenses", "suggestion": "Opt for more cost-effective transportation options instead of frequent Uber rides." }
+        ]
+    },
+    {
+        "name": "resources",
+        "data": [
+            { "heading": "Budgeting and Expense Management", "url": "https://www.nerdwallet.com/article/finance/10-steps-to-create-a-successful-budget" },
+            { "heading": "Saving Money on Food & Dining", "url": "https://www.moneycrashers.com/tips-save-money-food-without-sacrificing-quality/" },
+            { "heading": "Cutting Entertainment Expenses", "url": "https://www.moneyunder30.com/ways-to-save-money-on-entertainment" },
+            { "heading": "Smart Shopping Strategies", "url": "https://www.nerdwallet.com/article/finance/how-to-avoid-impulse-spending" }
+        ]
+    }
+]

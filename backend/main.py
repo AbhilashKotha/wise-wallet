@@ -163,11 +163,31 @@ def process_text(question,live):
       transactions_response_string = completion.choices[0].message.content
       return transactions_response_string
 
-  # try:
-  #       response_dict = ast.literal_eval(transactions_response_string)
-  #       print('dict after')
-  #       print(response_dict)
-  # except ValueError:
-  #       print("Error: Response is not a valid Python dictionary")
-  #       return None
+def process_suggestions(budget, day,spent):
+   
+
+  dataToBeUsed = liveDataFromJSON
+  prompts=[
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "I have a monthly budget of "+str(budget)+" dollars and I have already spent "+ str(spent) +" by day"+str(day)+" of the month. Can you give me only  3 suggestions on where  and how much to cut my expenses and where to allocate more to be on track to be on track with  my budget? I also could use two links to learning resources like articles or videos. Please use my transaction list below to understand my spending patterns and suggest accordingly. I strictly want a python dictionary to be the output formart ***ex:"+ str() + ", no other text leading or trailing. \n\n{}".format(dataToBeUsed)}
+    ]
+  config = load_config()
+  print('I am in gpt')
+  print(config)
+  client = OpenAI(api_key=config)
+  print('I am after client')
+  completion = client.chat.completions.create(
+  model="gpt-4", 
+  messages=prompts
+    )
+  transactions_response_string = completion.choices[0].message.content
+  # return transactions_response_string
+  try:
+        response_dict = ast.literal_eval(transactions_response_string)
+        print('dict after')
+        print(response_dict)
+        return response_dict
+  except ValueError:
+        print("Error: Response is not a valid Python dictionary")
+        return None
   

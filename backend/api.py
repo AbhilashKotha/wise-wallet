@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import io
-from main import process_doc,detect_document_text,process_text
+from main import process_doc,detect_document_text,process_text,process_suggestions
 import json
 from datetime import datetime, timedelta 
 
@@ -36,6 +36,16 @@ def upload_pdf():
         return jsonify(result), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+
+@app.route('/get_suggestions', methods=['POST'])
+def get_suggestions():
+        params = request.get_json()
+        # text = process_suggestions(params['budget'],params['day'],params['spent'])
+        import json
+        f = open('suggestions.json')
+        dataOut = json.load(f)
+        f.close()
+        return jsonify(dataOut)
 
 @app.route('/process_pdf', methods=['POST'])
 def process_pdf():

@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/DashboardComponent.css'; // Import your CSS file
 import PersonalDataChart from './PersonalDataChartComponent';
 import LeaderboardContainer from './Leaderboardcontainer'
+import SuggestionsComponent from './SuggestionsComponent';
 const DashboardComponent = () => {
     return (
         <div className="dashboard-container">
@@ -10,7 +11,10 @@ const DashboardComponent = () => {
                     <PersonalDataChart />
                 </div>
                 <div className="row">
-
+                    <h3>
+                        How can you get ahead?
+                    </h3>
+                    <SuggestionsComponent/>
                 </div>
             </div>
 
